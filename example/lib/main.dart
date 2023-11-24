@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:crisp_chat_sdk/crisp_chat_sdk.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,10 +36,9 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
     final sdk = CrispChatSdk();
-    await sdk.configure(websiteId: "Your WebsiteId");
-    await sdk.setUserEmail(email: "mohammad.mohammady.73@gmail.com");
-    await sdk.setSessionString(key: "f1KEY", value: "f1value");
-    await sdk.setSessionString(key: "f2KEY", value: "f2value");
+    await sdk.configure(websiteId: "02c4a6e7-1997-4490-8da2-95c648407e57");
+    await sdk.setUserEmail(email: "arifsyafieomar@airasia.com");
+    await sdk.setSessionSegment(segment: "ustaz");
     await CrispChatSdk().openChat();
   }
 }
